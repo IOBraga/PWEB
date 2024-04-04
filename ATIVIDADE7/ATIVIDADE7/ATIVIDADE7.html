@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function jogarJokenpo() {
+            var opcoes = ["pedra", "papel", "tesoura"];
+            var jogarNovamente = true;
+
+            while (jogarNovamente) {
+                var escolhaUsuario = prompt("Escolha pedra, papel ou tesoura:").toLowerCase();
+                if (!opcoes.includes(escolhaUsuario)) {
+                    alert("Escolha inválida! Por favor, escolha pedra, papel ou tesoura.");
+                    continue;
+                }
+
+                var escolhaComputador = opcoes[Math.floor(Math.random() * opcoes.length)];
+
+                alert("Você escolheu: " + escolhaUsuario);
+                alert("O computador escolheu: " + escolhaComputador);
+
+                if (escolhaUsuario === escolhaComputador) {
+                    alert("Empate!");
+                } else if (
+                    (escolhaUsuario === "pedra" && escolhaComputador === "tesoura") ||
+                    (escolhaUsuario === "tesoura" && escolhaComputador === "papel") ||
+                    (escolhaUsuario === "papel" && escolhaComputador === "pedra")
+                ) {
+                    alert("Você ganhou!");
+                } else {
+                    alert("O computador ganhou!");
+                }
+
+                // Perguntar ao jogador se ele deseja jogar novamente
+                jogarNovamente = confirm("Deseja jogar novamente?");
+            }
+        }
+
+        // Chamar a função para iniciar o jogo
+        jogarJokenpo();
+
+    </script>
+</body>
+
+</html>
