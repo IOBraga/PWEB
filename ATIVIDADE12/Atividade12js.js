@@ -108,6 +108,6 @@ alert(`
     \nBANCO: ${objPoupanca.getBanco()}
     \nNÚMERO CONTA: ${objPoupanca.getNumconta()}
     \nSALDO: ${objPoupanca.getSaldo()}
-    \nSALDO ESPECIAL: ${objPoupanca.getJuros()}
+    \nJUROS: ${objPoupanca.getJuros()}
     \nDATA VENCIMENTO: ${objPoupanca.getDataVenc()}
 `)
